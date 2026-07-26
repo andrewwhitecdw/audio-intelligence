@@ -242,8 +242,8 @@ class MagInstPhaseToGriffinLim(nn.Module):
         window = self.window.to(mag_inst_phase.device)
         result = griffinlim(
             mag_inst_phase[0], 
-            mag_inst_phase[2],
             mag_inst_phase[1],
+            mag_inst_phase[2],
             window=window,
             n_fft=self.n_fft,
             win_length=self.win_length,
